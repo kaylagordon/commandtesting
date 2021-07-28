@@ -1,0 +1,36 @@
+.contact-header {
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.contact-unit > h3 {
+  color: #FF4C4C;
+  margin: 0;
+}
+
+.contact-unit > p {
+  color: white;
+  margin: 0;
+}
+
+nav {
+  width: 60%;
+  margin-left: 40%;
+}
+
+.navlink {
+  background-color: #262626;
+  text-decoration: none;
+  color: white;
+  margin: 0 1em;
+  padding: .5em;
+  display: inline-block;
+  width: 18%;
+  text-align: center;
+}
+
+.active-navlink {
+  background-color: #FF4C4C;
+}
