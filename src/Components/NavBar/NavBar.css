@@ -29,6 +29,7 @@ nav {
   display: inline-block;
   width: 18%;
   text-align: center;
+  border-radius: 0 0 5px 5px;
 }
 
 .active-navlink {
