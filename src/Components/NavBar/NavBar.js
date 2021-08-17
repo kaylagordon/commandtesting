@@ -15,9 +15,9 @@ function NavBar() {
         </div>
       </section>
       <nav>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/home'>HOME</NavLink>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/about'>ABOUT US</NavLink>
+        <NavLink className='navlink' activeClassName='active-navlink' to='/'>HOME</NavLink>
         <NavLink className='navlink' activeClassName='active-navlink' to='/whatwedo'>WHAT WE DO</NavLink>
+        <NavLink className='navlink' activeClassName='active-navlink' to='/about'>ABOUT US</NavLink>
         <NavLink className='navlink' activeClassName='active-navlink' to='/contact'>CONTACT US</NavLink>
       </nav>
     </header>
