@@ -13,18 +13,17 @@ function WhatWeDo() {
       <section className="offer-bundle">
         <img src="TBD" className="offer-image" alt="" />
         <h5>Ground Ladder Testing</h5>
-        <p className="offer-text">Ground ladder testing in accordance with NFPA 1932
-        // Pump Testing – Pump testing in accordance with NFPA 1901 & 1911</p>
+        <p className="offer-text">Ground ladder testing in accordance with NFPA 1932</p>
+      </section>
+      <section className="offer-bundle">
+      <img src="TBD" className="offer-image" alt="" />
+      <h5>Pump Testing</h5>
+      <p className="offer-text">Pump testing in accordance with NFPA 1901 & 1911</p>
       </section>
       <section className="offer-bundle">
         <img src="TBD" className="offer-image" alt="" />
         <h5>Non-destructive Testing</h5>
         <p className="offer-text">Liquid Penetrant, Magnetic Particle, Ultrasonic, and Visual Testing.  Consulting and NDT Level III services.</p>
-      </section>
-      <section className="offer-bundle">
-        <img src="TBD" className="offer-image" alt="" />
-        <h5>??</h5>
-        <p className="offer-text">??</p>
       </section>
     </div>
   );

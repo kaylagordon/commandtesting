@@ -1,0 +1,30 @@
+.home {
+  /* background-image: ''; */
+}
+
+.title-box {
+  background-color: #FF4C4C;
+  /* opacity: .5; */
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding: 15vh 0;
+  width: 50%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  background-color: #262626;
+  font-size: 30px;
+  margin-top: 10vh;
+  padding: 1vh;
+}

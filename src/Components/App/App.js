@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <NavBar />
       <Route exact path='/'>
         <Home />

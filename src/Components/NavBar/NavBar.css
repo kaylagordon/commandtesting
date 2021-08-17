@@ -16,8 +16,8 @@
 }
 
 nav {
-  width: 60%;
-  margin-left: 40%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navlink {
@@ -27,7 +27,7 @@ nav {
   margin: 0 1em;
   padding: .5em;
   display: inline-block;
-  width: 18%;
+  width: 10%;
   text-align: center;
   border-radius: 0 0 5px 5px;
 }

@@ -10,3 +10,15 @@ red: #FF4C4C
   margin: 0;
   padding: 0;
 }
+
+main {
+  margin-top: -4.3vh;
+  height: 100%;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
