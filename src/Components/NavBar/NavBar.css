@@ -35,3 +35,7 @@ nav {
 .active-navlink {
   background-color: #FF4C4C;
 }
+
+.navlink:hover {
+  background-color: gray;
+}
