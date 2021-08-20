@@ -2,22 +2,42 @@
   background-color: #262626;
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6em;
+}
+
+.contact-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 .contact-unit > h3 {
   color: #FF4C4C;
   margin: 0;
+  padding: 0;
 }
 
 .contact-unit > p {
   color: white;
-  margin: 0;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
+  margin-top: 6em;
 }
 
 .navlink {
@@ -30,18 +50,14 @@ nav {
   width: 10%;
   text-align: center;
   border-radius: 0 0 5px 5px;
+  border: none;
+  font-size: 16px;
 }
 
-.active-navlink {
+/* .active-navlink {
   background-color: #FF4C4C;
-}
+} */
 
 .navlink:hover {
   background-color: gray;
 }
-
-/* .navlink > button {
-  border: none;
-  background-color: inherit;
-  font-size: 16px;
-} */

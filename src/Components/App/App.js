@@ -13,14 +13,18 @@ function App() {
   const about = useRef();
   const contact = useRef();
 
+  function scrollTo(element) {
+    element.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="app">
-        <NavBar top={ top } offerings={ offerings } about={ about } contact={ contact } />
+        <NavBar top={ top } offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
         <Home />
         <WhatWeDo nav={ offerings } />
         <About nav={ about } />
         <Contact nav={ contact } />
-        <Footer nav={ top } />
+        <Footer nav={ top } scrollTo={ scrollTo } />
     </div>
   );
 }

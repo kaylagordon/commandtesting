@@ -1,13 +1,12 @@
 import './Footer.css';
 
-const Footer = ({ nav }) => {
-  function scrollToTop() {
-    nav.current.scrollIntoView({ behavior: 'smooth' })
-  }
+const Footer = ({ nav, scrollTo }) => {
 
   return (
-    <div className="Footer">
-      <button onClick={scrollToTop}>Back to Top</button>
+    <div className="footer">
+      <button onClick={() => { scrollTo(nav) }}>Back to Top</button>
+      <p>yelp link</p>
+      <p>insta/fb</p>
     </div>
   );
 }
