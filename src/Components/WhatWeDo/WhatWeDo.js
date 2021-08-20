@@ -1,8 +1,8 @@
 import './WhatWeDo.css';
 
-function WhatWeDo() {
+const WhatWeDo = ({ nav }) => {
   return (
-    <div className="WhatWeDo">
+    <div className="WhatWeDo" ref={nav}>
       <img src="logo" className="logo" alt="" />
       <h4>WHAT WE DO</h4>
       <section className="offer-bundle">

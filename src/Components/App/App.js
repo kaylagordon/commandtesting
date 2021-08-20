@@ -1,27 +1,26 @@
+import React, { forwardRef, useRef } from 'react';
 import './App.css';
 import Home from '../Home/Home.js';
 import NavBar from '../NavBar/NavBar.js';
 import About from '../About/About.js';
 import WhatWeDo from '../WhatWeDo/WhatWeDo.js';
 import Contact from '../Contact/Contact.js';
-import { Route } from 'react-router-dom';
+import Footer from '../Footer/Footer.js';
 
 function App() {
+  const top = useRef();
+  const offerings = useRef();
+  const about = useRef();
+  const contact = useRef();
+
   return (
     <div className="app">
-      <NavBar />
-      <Route exact path='/'>
+        <NavBar top={ top } offerings={ offerings } about={ about } contact={ contact } />
         <Home />
-      </Route>
-      <Route exact path='/about'>
-        <About />
-      </Route>
-      <Route exact path='/whatwedo'>
-        <WhatWeDo />
-      </Route>
-      <Route exact path='/contact'>
-        <Contact />
-      </Route>
+        <WhatWeDo nav={ offerings } />
+        <About nav={ about } />
+        <Contact nav={ contact } />
+        <Footer nav={ top } />
     </div>
   );
 }

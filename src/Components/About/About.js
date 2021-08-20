@@ -1,8 +1,8 @@
 import './About.css';
 
-function About() {
+const About = ({ nav }) => {
   return (
-    <div className="about">
+    <div className="about" ref={nav}>
       <img src="TBD" className="half-page-image" alt="" />
       <section className="half-page-section">
         <img src="logo" className="logo" alt="logo" />

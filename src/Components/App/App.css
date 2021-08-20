@@ -11,14 +11,14 @@ red: #FF4C4C
   padding: 0;
 }
 
-main {
-  margin-top: -4.3vh;
-  height: 100%;
-}
-
 html,
 body,
 #root,
-.app {
+.app,
+main {
   height: 100%;
+}
+
+main {
+  margin-top: -5vh;
 }

@@ -1,9 +1,14 @@
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
 
-function NavBar() {
+const NavBar = ({ top, offerings, about, contact }) => {
+  function handleBackClick(nav) {
+    nav.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
+
   return (
-    <header className='header'>
+    <header className='header' ref={top}>
       <section className='contact-header'>
         <div className='contact-unit'>
           <h3>EMAIL US</h3>
@@ -15,10 +20,9 @@ function NavBar() {
         </div>
       </section>
       <nav>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/'>HOME</NavLink>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/whatwedo'>WHAT WE DO</NavLink>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/about'>ABOUT US</NavLink>
-        <NavLink className='navlink' activeClassName='active-navlink' to='/contact'>CONTACT US</NavLink>
+        <NavLink className='navlink' activeClassName='active-navlink' to='/whatwedo' onClick={() => { handleBackClick(offerings)}}>WHAT WE DO</NavLink>
+        <NavLink className='navlink' activeClassName='active-navlink' to='/about' onClick={() => { handleBackClick(about)}}>ABOUT US</NavLink>
+        <NavLink className='navlink' activeClassName='active-navlink' to='/contact' onClick={() => { handleBackClick(contact)}}>CONTACT US</NavLink>
       </nav>
     </header>
   );

@@ -1,8 +1,9 @@
 import './Contact.css';
 
-function Contact() {
+const Contact = ({ nav }) => {
+
   return (
-    <div className="contact">
+    <div className="contact" ref={nav}>
       <form>
         <h4>GET IN TOUCH</h4>
         <label for="name">Name</label>
