@@ -1,9 +1,9 @@
 import './Home.css';
 
-function Home() {
+function Home({ top }) {
 
   return (
-    <main className="home">
+    <main className="home" ref={ top }>
       <div className="transparent">
         <section className="title-box">
           <h1>COMMAND</h1>

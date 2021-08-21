@@ -1,12 +1,13 @@
 import './Footer.css';
+import backToTop from '../../assets/back_to_top.png';
 
 const Footer = ({ nav, scrollTo }) => {
 
   return (
     <div className="footer">
-      <button onClick={() => { scrollTo(nav) }}>Back to Top</button>
-      <p>yelp link</p>
-      <p>insta/fb</p>
+      <button id="back-to-top-btn" onClick={() => { scrollTo(nav) }}>
+        <img src={backToTop} alt="back to top of page" />
+      </button>
     </div>
   );
 }

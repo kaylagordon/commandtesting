@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="app">
-        <NavBar top={ top } offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
-        <Home />
+        <NavBar offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
+        <Home top={ top } />
         <WhatWeDo nav={ offerings } />
         <About nav={ about } />
         <Contact nav={ contact } />

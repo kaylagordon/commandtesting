@@ -1,0 +1,12 @@
+#back-to-top-btn {
+  border: none;
+  background-color: #FF4C4C;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  /* z-index: 15; */
+  left: 95%;
+  top: 90%;
+
+}

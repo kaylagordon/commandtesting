@@ -1,10 +1,10 @@
 import './NavBar.css';
 import logo from '../../assets/logo.png';
 
-const NavBar = ({ top, offerings, about, contact, scrollTo }) => {
+const NavBar = ({ offerings, about, contact, scrollTo }) => {
 
   return (
-    <header className='header' ref={top}>
+    <header className='header'>
       <section className='contact-header'>
         <div className='contact-unit left'>
           <h3>EMAIL US</h3>
