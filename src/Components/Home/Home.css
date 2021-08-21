@@ -8,17 +8,13 @@
 
 .transparent {
   background-color: #FF4C4C;
-  /* opacity: .9; */
+  opacity: .9;
   color: white;
   text-align: center;
   margin: auto;
   padding: 12vh 0;
   width: 50%;
-}
-
-.title-box {
-  /* opacity: 1; */
-  /* position: relative; */
+  z-index: -1;
 }
 
 h1 {
