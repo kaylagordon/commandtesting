@@ -1,5 +1,5 @@
 import './NavBar.css';
-// import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 
 const NavBar = ({ top, offerings, about, contact, scrollTo }) => {
 
@@ -10,15 +10,16 @@ const NavBar = ({ top, offerings, about, contact, scrollTo }) => {
           <h3>EMAIL US</h3>
           <p>info@commandtesting.com</p>
         </div>
+        {/* <img className="header-logo" src={ logo } alt="logo" /> */}
         <div className='contact-unit right'>
           <h3>CALL US</h3>
           <p>(614) 398-0120</p>
         </div>
       </section>
       <nav>
-        <button className='navlink' onClick={() => { scrollTo(offerings)}}>WHAT WE DO</button>
-        <button className='navlink' onClick={() => { scrollTo(about)}}>ABOUT US</button>
-        <button className='navlink' onClick={() => { scrollTo(contact)}}>CONTACT US</button>
+        <button className='navlink' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
+        <button className='navlink' onClick={() => { scrollTo(about) }}>ABOUT US</button>
+        <button className='navlink' onClick={() => { scrollTo(contact) }}>CONTACT US</button>
       </nav>
     </header>
   );
