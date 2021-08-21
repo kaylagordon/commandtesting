@@ -5,7 +5,7 @@ const Contact = ({ nav }) => {
   return (
     <div className="contact" ref={nav}>
       <form>
-        <h4>GET IN TOUCH</h4>
+        <h4>REQUEST A QUOTE</h4>
         <label for="name">Name</label>
         <input type="text" id="name" />
         <label for="phone">Phone Number</label>

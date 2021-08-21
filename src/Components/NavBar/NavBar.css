@@ -36,10 +36,6 @@
   color: white;
 }
 
-/* .header-logo {
-  height: 5em;
-} */
-
 nav {
   display: flex;
   justify-content: flex-end;
@@ -54,7 +50,7 @@ nav {
   margin: 0 1em;
   padding: .5em;
   display: inline-block;
-  width: 10%;
+  width: 12em;
   text-align: center;
   border-radius: 0 0 5px 5px;
   border: none;
@@ -64,4 +60,5 @@ nav {
 
 .navlink:hover {
   background-color: gray;
+  font-weight: bold;
 }

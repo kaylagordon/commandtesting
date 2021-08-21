@@ -10,7 +10,6 @@ const NavBar = ({ top, offerings, about, contact, scrollTo }) => {
           <h3>EMAIL US</h3>
           <p>info@commandtesting.com</p>
         </div>
-        {/* <img className="header-logo" src={ logo } alt="logo" /> */}
         <div className='contact-unit right'>
           <h3>CALL US</h3>
           <p>(614) 398-0120</p>
@@ -19,7 +18,7 @@ const NavBar = ({ top, offerings, about, contact, scrollTo }) => {
       <nav>
         <button className='navlink' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
         <button className='navlink' onClick={() => { scrollTo(about) }}>ABOUT US</button>
-        <button className='navlink' onClick={() => { scrollTo(contact) }}>CONTACT US</button>
+        <button className='navlink' onClick={() => { scrollTo(contact) }}>REQUEST A QUOTE</button>
       </nav>
     </header>
   );
