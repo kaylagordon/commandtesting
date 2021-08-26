@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/commandtesting/static/css/main.0764759f.chunk.css",
+    "main.js": "/commandtesting/static/js/main.73f88218.chunk.js",
+    "main.js.map": "/commandtesting/static/js/main.73f88218.chunk.js.map",
+    "runtime-main.js": "/commandtesting/static/js/runtime-main.67858c40.js",
+    "runtime-main.js.map": "/commandtesting/static/js/runtime-main.67858c40.js.map",
+    "static/js/2.04d0abba.chunk.js": "/commandtesting/static/js/2.04d0abba.chunk.js",
+    "static/js/2.04d0abba.chunk.js.map": "/commandtesting/static/js/2.04d0abba.chunk.js.map",
+    "index.html": "/commandtesting/index.html",
+    "static/css/main.0764759f.chunk.css.map": "/commandtesting/static/css/main.0764759f.chunk.css.map",
+    "static/js/2.04d0abba.chunk.js.LICENSE.txt": "/commandtesting/static/js/2.04d0abba.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/commandtesting/static/media/aerial_platform_bw_cropped.87d110e1.jpg",
+    "static/media/logo.03fe2c38.png": "/commandtesting/static/media/logo.03fe2c38.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67858c40.js",
+    "static/js/2.04d0abba.chunk.js",
+    "static/css/main.0764759f.chunk.css",
+    "static/js/main.73f88218.chunk.js"
+  ]
+}

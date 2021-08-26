@@ -60,4 +60,5 @@ nav {
 
 .navlink:hover {
   background-color: gray;
+  cursor: pointer;
 }

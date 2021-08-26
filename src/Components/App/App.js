@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Home from '../Home/Home.js';
 import NavBar from '../NavBar/NavBar.js';
@@ -21,8 +21,8 @@ function App() {
     <div className="app">
         <NavBar offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
         <Home top={ top } />
-        <WhatWeDo nav={ offerings } />
-        <About nav={ about } />
+        { /* <WhatWeDo nav={ offerings } />
+        <About nav={ about } /> */}
         <Contact nav={ contact } />
         <Footer nav={ top } scrollTo={ scrollTo } />
     </div>
