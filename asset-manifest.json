@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.901ef274.chunk.css",
+    "main.js": "/static/js/main.92983374.chunk.js",
+    "main.js.map": "/static/js/main.92983374.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.706c00ae.js",
+    "runtime-main.js.map": "/static/js/runtime-main.706c00ae.js.map",
+    "static/js/2.0bd0e42b.chunk.js": "/static/js/2.0bd0e42b.chunk.js",
+    "static/js/2.0bd0e42b.chunk.js.map": "/static/js/2.0bd0e42b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.901ef274.chunk.css.map": "/static/css/main.901ef274.chunk.css.map",
+    "static/js/2.0bd0e42b.chunk.js.LICENSE.txt": "/static/js/2.0bd0e42b.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/static/media/aerial_platform_bw_cropped.87d110e1.jpg",
+    "static/media/truck_rear_bw_cropped.9d72bcae.jpeg": "/static/media/truck_rear_bw_cropped.9d72bcae.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.706c00ae.js",
+    "static/js/2.0bd0e42b.chunk.js",
+    "static/css/main.901ef274.chunk.css",
+    "static/js/main.92983374.chunk.js"
+  ]
+}
