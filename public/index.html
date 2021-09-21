@@ -6,10 +6,27 @@
     <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <title>Command Testing</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-308343923"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-308343923');
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.addEventListener('load', function() {
+        var set = setInterval(function() {
+          if (document.querySelector('.success')) {
+            if (document.querySelector('.success').innerText.includes("Success! Your message has been sent. We will reach out to you shortly.")) {
+              gtag('event', 'conversion', {'send_to': 'AW-308343923/CkeVCM-vx_QCEPPog5MB'});
+              clearInterval(set);
+            }
+          }
+        }, 1000)
+      })
+    </script>
   </body>
 </html>
-
-<!-- test -->
