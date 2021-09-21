@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: -5vh;
+  margin-top: -6em;
 }
 
 .transparent {
@@ -18,17 +18,59 @@
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 8vw;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 3vw;
 }
 
 h3 {
   background-color: #262626;
-  font-size: 30px;
+  font-size: 1.8vw;
   margin-top: 10vh;
   padding: 1vh;
+}
+
+@media screen and (max-width: 900px) {
+  .transparent {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 9vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+
+  }
+
+  .transparent {
+    width: 90%;
+    padding: 25px 0;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+    margin-top: 10px;
+  }
 }

@@ -30,10 +30,12 @@
   color: #FF4C4C;
   margin: 0;
   padding: 0;
+  font-size: calc(12px + .9vw);
 }
 
 .contact-unit > p {
   color: white;
+  font-size: calc(12px + .7vw);
 }
 
 nav {
@@ -61,4 +63,20 @@ nav {
 .navlink:hover {
   background-color: gray;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .navlink {
+    display: none;
+  }
+
+  .contact-header {
+    position: relative;
+    padding: 0 1em;
+    height: 4em;
+  }
 }

@@ -5,8 +5,18 @@
   height: 50px;
   width: 50px;
   position: fixed;
-  /* z-index: 15; */
   left: 95%;
   top: 90%;
+}
 
+@media screen and (max-width: 1000px) {
+  #back-to-top-btn {
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #back-to-top-btn {
+    left: 85%;
+  }
 }

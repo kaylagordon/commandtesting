@@ -2,6 +2,7 @@
   display: flex;
   background-color: #262626;
   border-left: 30px solid #FF4C4C;
+  min-height: 60vh;
 }
 
 .form-container,
@@ -13,7 +14,6 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50%;
 }
 
 .form-container {
@@ -75,4 +75,23 @@ input[type='submit']:hover {
 
 .success-container {
   height: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    display: block;
+    border: none;
+  }
+
+  .form-container {
+    width: auto;
+  }
+
+  .half-page-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
 }
