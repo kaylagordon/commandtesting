@@ -9,4 +9,4 @@
 ## Deploying
 
 ## Tech Stack
-- 
+- [React v18](https://react.dev/)
