@@ -7,7 +7,7 @@
 - Run app locally: `npm start`
 
 ## Deploying
-- Deploys to commandtesting.com automatically from `gh-pages` branch. Merge changes into `gh-pages` when ready and changes should be reflected on live site within an hour.
+- Deploys to [commandtesting.com](commandtesting.com) automatically from `gh-pages` branch. Merge changes into `gh-pages` and changes should be reflected on live site within an hour.
 
 ## Tech Stack
 - [React v18](https://react.dev/)
