@@ -16,4 +16,4 @@
 - [Canva Comp](https://www.canva.com/design/DAEkX2MoKiI/jiDOTsLDv2SBbbDocfPncQ/edit?utm_content=DAEkX2MoKiI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Current State
-- "WHO WE ARE" (`About.js`) and "WHAT WE DO" (`WhatWeDo.js`) components are incomplete. To finish those, refer to the design link above. You'll want to comment IN the code in `App.js` and `Nav.js` to have those components appear on the page. Mostly only CSS is remaining.
+- "WHO WE ARE" (`About.js`) and "WHAT WE OFFER" (`WhatWeDo.js`) components are incomplete. To finish those, refer to the design link above. You'll want to comment IN the code in `App.js` and `Nav.js` to have those components appear on the page. Mostly only CSS is remaining.
