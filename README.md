@@ -7,7 +7,9 @@
 - Run app locally: `npm start`
 
 ## Deploying
-- Deploys to [commandtesting.com](commandtesting.com) automatically from `gh-pages` branch. Merge changes into `gh-pages` and changes should be reflected on live site within an hour.
+- To deploy changes: `npm run deploy`
+- Deploys to [commandtesting.com](commandtesting.com)
+- Deplyed using [these steps](https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14)
 
 ## Tech Stack
 - [React v18](https://react.dev/)
