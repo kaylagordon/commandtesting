@@ -17,27 +17,27 @@
 }
 
 h1 {
-  font-size: 8vw;
+  font-size: calc(45px + 3vw);
   font-weight: 800;
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: calc(26px + 1.5vw);
 }
 
 .title-box h3 {
   background-color: #262626;
-  font-size: 1.8vw;
+  font-size: calc(16px + .5vw);
   margin-top: 10vh;
   padding: 1vh;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1150px) {
   .transparent {
     width: 80%;
   }
 
-  h1 {
+  /* h1 {
     font-size: 9vw;
   }
 
@@ -47,7 +47,7 @@ h2 {
 
   h3 {
     font-size: 2.5vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 600px) {
@@ -57,16 +57,15 @@ h2 {
     padding: 25px 0;
   }
 
-  h1 {
+  /* h1 {
     font-size: 10vw;
   }
 
   h2 {
     font-size: 5vw;
-  }
+  } */
 
-  h3 {
-    font-size: 4vw;
+  .title-box h3 {
     margin-top: 10px;
   }
 }

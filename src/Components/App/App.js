@@ -14,7 +14,7 @@ function App() {
   const contact = useRef();
 
   function scrollTo(element) {
-    element.current.scrollIntoView({ behavior: 'smooth' })
+    element.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
   }
 
   return (

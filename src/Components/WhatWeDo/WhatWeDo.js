@@ -10,7 +10,7 @@ const WhatWeDo = ({ nav }) => {
     <div className="WhatWeDo" ref={nav}>
       <img src={logo} className="logo" alt="" />
       <h4>WHAT WE DO</h4>
-      <section class="bundle-container">
+      <section className="bundle-container">
         <section className="offer-bundle">
           <img src={aerial} className="offer-image" alt="" />
           <h5>Aerial Testing</h5>
@@ -35,7 +35,5 @@ const WhatWeDo = ({ nav }) => {
     </div>
   );
 }
-
-// For the what we offer page, I’m thinking 4 pictures.  Aerial bucket picture, ground ladder picture, pump testing picture and then the welds picture.
 
 export default WhatWeDo;

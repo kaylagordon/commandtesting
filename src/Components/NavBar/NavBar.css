@@ -57,6 +57,7 @@ nav {
   justify-content: flex-end;
   background-color: #262626;
   padding: 25px;
+  border-bottom: 5px solid #FF4C4C;
 }
 
 .navlink {
