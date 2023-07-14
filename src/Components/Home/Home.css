@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: -6em;
+  display: block;
 }
 
 .transparent {
@@ -14,7 +14,6 @@
   margin: auto;
   padding: 12vh 0;
   width: 50%;
-  z-index: -1;
 }
 
 h1 {
@@ -26,7 +25,7 @@ h2 {
   font-size: 3vw;
 }
 
-h3 {
+.title-box h3 {
   background-color: #262626;
   font-size: 1.8vw;
   margin-top: 10vh;
@@ -52,9 +51,6 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
-  .home {
-
-  }
 
   .transparent {
     width: 90%;
