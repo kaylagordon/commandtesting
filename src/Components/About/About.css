@@ -1,0 +1,33 @@
+/*
+
+black: #262626
+red: #FF4C4C
+
+*/
+
+.about {
+  display: flex;
+  background-color: white;
+}
+
+.half-page-section img {
+  width: 75px;
+}
+
+.half-page-section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h4 {
+  color: #FF4C4C;
+  margin: 25px 0;
+}
+
+.about p {
+  color: #262626;
+  text-align: center;
+}

@@ -21,8 +21,8 @@ function App() {
     <div className="app">
         <NavBar offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
         <Home top={ top } />
-        {/* <WhatWeDo nav={ offerings } />
-        <About nav={ about } /> */}
+        {/* <WhatWeDo nav={ offerings } /> */}
+        <About nav={ about } />
         <Contact nav={ contact } />
         <Footer nav={ top } scrollTo={ scrollTo } />
     </div>
