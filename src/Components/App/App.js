@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import './App.css';
 import Home from '../Home/Home.js';
 import NavBar from '../NavBar/NavBar.js';
@@ -17,10 +18,12 @@ function App() {
     element.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
   }
 
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
+
   return (
     <div className="app">
-        <NavBar offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
-        <Home top={ top } />
+        <NavBar visible={ myElementIsVisible } offerings={ offerings } about={ about } contact={ contact } scrollTo={ scrollTo }/>
+        <Home myRef={ myRef } top={ top } />
         <WhatWeDo nav={ offerings } />
         <About nav={ about } />
         <Contact nav={ contact } />
