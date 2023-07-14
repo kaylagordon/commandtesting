@@ -15,8 +15,8 @@ const NavBar = ({ offerings, about, contact, scrollTo }) => {
         </div>
       </section>
       <nav>
-        {/* <button className='navlink' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
-        <button className='navlink' onClick={() => { scrollTo(about) }}>ABOUT US</button> */}
+        <button className='navlink' onClick={() => { scrollTo(about) }}>WHO WE ARE</button>
+        <button className='navlink' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
         <button className='navlink' onClick={() => { scrollTo(contact) }}>REQUEST A QUOTE</button>
       </nav>
     </header>

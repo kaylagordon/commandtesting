@@ -6,7 +6,8 @@
 }
 
 .form-container,
-.half-page-image {
+.half-page-image,
+.half-page-section {
   width: 50%;
 }
 
@@ -83,7 +84,8 @@ input[type='submit']:hover {
     border: none;
   }
 
-  .form-container {
+  .form-container,
+  .half-page-section {
     width: auto;
   }
 

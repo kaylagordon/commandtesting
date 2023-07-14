@@ -1,4 +1,46 @@
+/*
+
+black: #262626
+red: #FF4C4C
+
+*/
+
+.WhatWeDo {
+  text-align: center;
+  padding: 80px;
+}
+
+.WhatWeDo .logo {
+  width: 75px;
+}
+
+.bundle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-bundle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
 .offer-image {
   width: 200px;
   height: 200px;
+}
+
+.offer-bundle h5 {
+  color: #FF4C4C;
+  font-size: 16px;
+}
+
+.offer-bundle p {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  width: 200px;
 }
