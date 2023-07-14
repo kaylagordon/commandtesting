@@ -81,7 +81,7 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .navlink {
+  .hide-small {
     display: none;
   }
 
