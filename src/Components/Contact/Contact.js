@@ -1,58 +1,70 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import emailjs from 'emailjs-com';
 import truckRear from '../../assets/truck_rear_bw_cropped.jpeg';
-
+// Quote requests are sent directly to info@commandtesting.com via Web3Forms,
+// so no third party's personal inbox is in the loop.
+const WEB3FORMS_ACCESS_KEY = '2123542d-7fe2-4e85-87cc-d932e5c379e6';
 class Contact extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       name: "",
       phone: "",
       email: "",
       message: "",
       error: false,
-      success: false
+      success: false,
+      sending: false
     }
   }
-
   handleChange = (event) => {
     this.setState({
       error: false,
       [event.target.name]: event.target.value
     })
   }
-
-  sendEmail = (event) => {
+  sendEmail = async (event) => {
     event.preventDefault();
-
-    if (this.state.name && this.state.phone && this.state.email && this.state.message) {
-
-      emailjs.sendForm('service_i939oes', 'template_uzao79p', event.target, 'user_2fzJVx9HcgbiMzqp03TQe')
-      .then((result) => {
-        this.displaySuccess();
-      }, (error) => {
-        console.log(error.text);
+    if (!(this.state.name && this.state.phone && this.state.email && this.state.message)) {
+      this.setState({ error: "Please fill out all fields." })
+      return;
+    }
+    this.setState({ sending: true, error: false });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: 'New Quote Request - Command Testing Website',
+          from_name: this.state.name,
+          name: this.state.name,
+          phone: this.state.phone,
+          email: this.state.email,
+          message: this.state.message,
+        })
       });
-    } else {
-      this.setState({ error: "Please fill out all fields."})
+      const result = await response.json();
+      if (result.success) {
+        this.displaySuccess();
+      } else {
+        this.setState({ sending: false, error: "Something went wrong. Please call or email us directly." });
+      }
+    } catch (err) {
+      this.setState({ sending: false, error: "Something went wrong. Please call or email us directly." });
     }
   }
-
   displaySuccess = () => {
     this.setState({
       name: "",
       phone: "",
       email: "",
       message: "",
+      sending: false,
       success: "Success! Your message has been sent. We will reach out to you shortly."
     });
-
     setTimeout(() => { this.setState({ success: false })}, 5000);
   }
-
-
   render() {
     return (
       <div className="contact" ref={this.props.nav}>
@@ -95,15 +107,15 @@ class Contact extends Component {
             { this.state.error && <p className="error">{this.state.error}</p> }
             <input
               type="submit"
-              value="Submit Request"
+              value={this.state.sending ? "Sending..." : "Submit Request"}
+              disabled={this.state.sending}
             />
           </form>
         }
       </div>
-      <img src={truckRear} className="half-page-image" alt="" />
+      <img src={truckRear} className="half-page-image" alt="Rear of a fire engine tested by Command Testing" />
       </div>
     );
   }
 }
-
 export default Contact;
