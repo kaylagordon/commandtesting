@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://commandtesting.com/sitemap.xml
