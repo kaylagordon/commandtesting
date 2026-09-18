@@ -19,9 +19,9 @@ const NavBar = ({ visible, offerings, about, contact, scrollTo }) => {
         </div>
       </section>
       <nav>
-        <button className='navlink hide-small' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
-        <button className='navlink hide-small' onClick={() => { scrollTo(about) }}>WHO WE ARE</button>
-        <button className='navlink' onClick={() => { scrollTo(contact) }}>REQUEST A QUOTE</button>
+        <button className='navlink' onClick={() => { scrollTo(offerings) }}>WHAT WE DO</button>
+        <button className='navlink' onClick={() => { scrollTo(about) }}>WHO WE ARE</button>
+        <button className='navlink navlink-cta' onClick={() => { scrollTo(contact) }}>REQUEST A QUOTE</button>
       </nav>
     </header>
   );

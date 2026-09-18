@@ -1,7 +1,9 @@
 import './Footer.css';
 import backToTop from '../../assets/back_to_top.png';
+
 const Footer = ({ nav, scrollTo }) => {
   const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -22,4 +24,5 @@ const Footer = ({ nav, scrollTo }) => {
     </footer>
   );
 }
+
 export default Footer;

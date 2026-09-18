@@ -18,6 +18,14 @@ red: #FF4C4C
   margin: 25px 0;
 }
 
+.WhatWeDo .service-area {
+  color: #A9A9A9;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
 .bundle-container {
   display: flex;
   justify-content: space-around;

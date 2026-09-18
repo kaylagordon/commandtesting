@@ -32,6 +32,30 @@ h2 {
   padding: 1vh;
 }
 
+.hero-subtext {
+  font-size: calc(13px + .3vw);
+  margin-top: 3vh;
+  letter-spacing: .5px;
+}
+
+.hero-cta {
+  background-color: #262626;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: calc(13px + .3vw);
+  padding: 14px 32px;
+  margin-top: 4vh;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.hero-cta:hover {
+  background-color: white;
+  color: #FF4C4C;
+}
+
 @media screen and (max-width: 1150px) {
   .transparent {
     width: 80%;

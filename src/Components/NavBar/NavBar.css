@@ -54,9 +54,14 @@ red: #FF4C4C
 nav {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   background-color: #262626;
-  padding: 25px;
+  padding: 20px 25px;
   border-bottom: 5px solid #FF4C4C;
+}
+
+.navlink-cta {
+  color: #FF4C4C;
 }
 
 .navlink {

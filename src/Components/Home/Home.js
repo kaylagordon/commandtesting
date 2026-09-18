@@ -1,5 +1,7 @@
 import './Home.css';
+
 function Home({ myRef, top, contact, scrollTo }) {
+
   return (
     <main className="home" ref={ top }>
       <div className="transparent">
@@ -14,4 +16,5 @@ function Home({ myRef, top, contact, scrollTo }) {
     </main>
   );
 }
+
 export default Home;
