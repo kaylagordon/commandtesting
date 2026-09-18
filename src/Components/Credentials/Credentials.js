@@ -2,9 +2,9 @@ import './Credentials.css';
 
 const items = [
   'ISO/IEC 17020 Accredited',
-  'ASNT Level III Certified',
+  'ASNT Level II Certified',
   'NFPA 1900, 1910 & 1930 Compliant',
-  '10+ Years Experience',
+  '15+ Years Experience',
   'Nationwide Service'
 ];
 

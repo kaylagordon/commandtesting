@@ -7,7 +7,7 @@ const NavBar = ({ visible, offerings, about, contact, scrollTo }) => {
       <section className='contact-header'>
         <div className='contact-unit left'>
           <h3>EMAIL US</h3>
-          <p>info@commandtesting.com</p>
+          <p><a href="mailto:info@commandtesting.com">info@commandtesting.com</a></p>
         </div>
         <div className={visible ? 'hidden' : 'title'}>
           <p>COMMAND TESTING</p>
@@ -15,7 +15,7 @@ const NavBar = ({ visible, offerings, about, contact, scrollTo }) => {
         </div>
         <div className='contact-unit right'>
           <h3>CALL US</h3>
-          <p>(614) 398-0120</p>
+          <p><a href="tel:+16143980120">(614) 398-0120</a></p>
         </div>
       </section>
       <nav>

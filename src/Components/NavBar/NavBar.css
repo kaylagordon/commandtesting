@@ -51,6 +51,16 @@ red: #FF4C4C
   font-size: calc(12px + .7vw);
 }
 
+.contact-unit > p > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-unit > p > a:hover {
+  color: #FF4C4C;
+  text-decoration: underline;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;

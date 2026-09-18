@@ -30,7 +30,7 @@ const WhatWeDo = ({ nav }) => {
         <section className="offer-bundle">
           <img src={weld} className="offer-image" alt="Close-up of aerial device welds inspected during non-destructive testing" />
           <h5>Non-Destructive Testing</h5>
-          <p className="offer-text">Liquid penetrant, magnetic particle, ultrasonic, and visual testing, plus NDT Level III consulting services.</p>
+          <p className="offer-text">Liquid penetrant, magnetic particle, ultrasonic, and visual testing performed by ASNT Level II certified technicians.</p>
         </section>
       </section>
     </div>
