@@ -2,10 +2,13 @@ import './Credentials.css';
 
 const items = [
   'ISO/IEC 17020 Accredited',
-  'ASNT Level II Certified',
-  'NFPA 1900, 1910 & 1930 Compliant',
+  'NDT Level II Technicians',
+  'ASNT Level III Oversight',
+  'NFPA 1900',
+  'NFPA 1910 (formerly NFPA 1911)',
+  'NFPA 1930 (formerly NFPA 1932)',
   '15+ Years Experience',
-  'Nationwide Service'
+  'Based in Columbus, OH'
 ];
 
 const Credentials = () => {

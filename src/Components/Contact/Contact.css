@@ -30,10 +30,50 @@ h4 {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: 16px;
   padding: 5px;
   margin-top: 16px;
+  font-family: inherit;
+}
+
+.form-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: #e8e8e8;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.form-container label input,
+.form-container label textarea,
+.form-container label select {
+  margin-top: 4px;
+  font-weight: 400;
+  color: #262626;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row label {
+  flex: 1;
+}
+
+.field-hint {
+  color: #A9A9A9;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
 }
 
 textarea {
@@ -51,7 +91,8 @@ input[type='submit'] {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
 }
 
@@ -76,6 +117,13 @@ input[type='submit']:hover {
 
 .success-container {
   height: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {

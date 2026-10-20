@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png';
 const NavBar = ({ visible, offerings, about, contact, scrollTo }) => {
   return (
     <header className='header'>
+      <a className="mobile-call" href="tel:+16143980120">Call (614) 398-0120</a>
       <section className='contact-header'>
         <div className='contact-unit left'>
           <h3>EMAIL US</h3>

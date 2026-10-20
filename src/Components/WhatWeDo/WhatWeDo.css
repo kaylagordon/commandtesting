@@ -59,9 +59,10 @@ red: #FF4C4C
 
 .offer-bundle p {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.45;
   text-align: center;
-  width: 200px;
+  width: 100%;
   margin-bottom: 20px;
 }
 

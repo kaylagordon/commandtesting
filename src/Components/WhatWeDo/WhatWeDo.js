@@ -10,27 +10,27 @@ const WhatWeDo = ({ nav }) => {
     <div className="WhatWeDo" ref={nav}>
       <img src={logo} className="logo" alt="Command Testing logo" />
       <h4>WHAT WE DO</h4>
-      <p className="service-area">Serving fire departments and municipalities nationwide</p>
+      <p className="service-area">Based in Columbus, OH<br />Aerial and ground ladder testing for fire departments nationwide</p>
       <section className="bundle-container">
         <section className="offer-bundle">
           <img src={aerial} className="offer-image" alt="Fire department aerial ladder truck bucket during annual aerial ladder testing" />
           <h5>Aerial Ladder Testing</h5>
-          <p className="offer-text">Annual aerial device certification testing in accordance with NFPA 1900 & 1910, performed on-site at your station.</p>
+          <p className="offer-text">Annual aerial device certification testing in accordance with NFPA 1900 and NFPA 1910 (formerly NFPA 1911), performed on-site for fire departments nationwide.</p>
         </section>
         <section className="offer-bundle">
           <img src={ladder} className="offer-image" alt="Ground ladders laid out for annual ground ladder testing" />
           <h5>Ground Ladder Testing</h5>
-          <p className="offer-text">Annual ground ladder testing and certification in accordance with NFPA 1930.</p>
+          <p className="offer-text">Annual ground ladder testing and certification in accordance with NFPA 1930 (formerly NFPA 1932), for fire departments nationwide.</p>
         </section>
         <section className="offer-bundle">
         <img src={pump} className="offer-image" alt="Fire engine pump truck during annual fire pump testing" />
         <h5>Fire Pump Testing</h5>
-        <p className="offer-text">Apparatus fire pump testing in accordance with NFPA 1900 & 1910.</p>
+        <p className="offer-text">Apparatus fire pump testing in accordance with NFPA 1900 and NFPA 1910 (formerly NFPA 1911), offered locally in central Ohio and at apparatus manufacturers.</p>
         </section>
         <section className="offer-bundle">
           <img src={weld} className="offer-image" alt="Close-up of aerial device welds inspected during non-destructive testing" />
           <h5>Non-Destructive Testing</h5>
-          <p className="offer-text">Liquid penetrant, magnetic particle, ultrasonic, and visual testing performed by ASNT Level II certified technicians.</p>
+          <p className="offer-text">Liquid penetrant, magnetic particle, ultrasonic, and visual testing performed by NDT Level II technicians with ASNT Level III oversight.</p>
         </section>
       </section>
     </div>
