@@ -12,7 +12,7 @@ const FieldGallery = () => {
         return (
           <Photo
             key={key}
-            className="field-photo"
+            className={'field-photo field-photo-' + key}
             imgClassName="field-photo-img"
             webp={photo.webp}
             src={photo.src}

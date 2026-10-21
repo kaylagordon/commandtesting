@@ -2,21 +2,38 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  align-items: start;
+  align-items: stretch;
   background-color: #1a1a1a;
   padding: 12px;
 }
 
 .field-gallery picture {
+  position: relative;
   display: block;
   min-width: 0;
+  aspect-ratio: 1512 / 650;
+  overflow: hidden;
+  background-color: #111;
 }
 
 .field-gallery img {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field-photo-aerialWide img {
+  object-position: center 46%;
+}
+
+.field-photo-ladder img {
+  object-position: center center;
+}
+
+.field-photo-pumpDraft img {
+  object-position: center 42%;
 }
 
 @media screen and (max-width: 800px) {
