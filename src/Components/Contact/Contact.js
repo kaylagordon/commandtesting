@@ -250,7 +250,7 @@ class Contact extends Component {
           </form>
         }
       </div>
-      <img src={truckRear} className="half-page-image" alt="Rear of a fire engine tested by Command Testing" />
+      <img src={truckRear} className="half-page-image" alt="Rear of a fire engine tested by Command Testing" loading="lazy" />
       </div>
     );
   }

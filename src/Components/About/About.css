@@ -7,7 +7,16 @@ red: #FF4C4C
 
 .about {
   display: flex;
+  align-items: stretch;
   background-color: white;
+}
+
+.about-photo {
+  width: 50%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+  flex: 0 0 50%;
 }
 
 .half-page-section img {
@@ -30,4 +39,16 @@ red: #FF4C4C
 .about p {
   color: #262626;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: 240px;
+    flex-basis: auto;
+  }
 }

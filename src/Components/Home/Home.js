@@ -1,9 +1,16 @@
 import './Home.css';
+import hero from '../../assets/hero-pump-testing.jpg';
 
 function Home({ myRef, top, contact, scrollTo }) {
 
   return (
     <main className="home" ref={ top }>
+      <img
+        className="hero-image"
+        src={hero}
+        alt="Technician checking a flow meter and hose line during an annual fire pump test"
+        fetchPriority="high"
+      />
       <div className="transparent">
         <section className="title-box">
           <h1>COMMAND</h1>

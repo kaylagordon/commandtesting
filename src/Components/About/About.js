@@ -1,13 +1,18 @@
 import './About.css';
-import pumpPanel from '../../assets/pump_panel1.jpg';
+import nightFlow from '../../assets/pump-night-flow.jpg';
 import logo from '../../assets/logo.png';
 
 const About = ({ nav }) => {
   return (
     <div className="about" ref={nav}>
-      <img src={pumpPanel} className="half-page-image" alt="Close-up of a fire apparatus pump panel gauges during Command Testing's NFPA pump testing" />
+      <img
+        src={nightFlow}
+        className="about-photo"
+        alt="Water discharging from a hose during a nighttime fire pump flow test"
+        loading="lazy"
+      />
       <section className="half-page-section">
-        <img src={logo} className="logo" alt="Command Testing logo" />
+        <img src={logo} className="logo" alt="Command Testing logo" loading="lazy" />
         <h4>WHO WE ARE</h4>
         <p>We are based in Columbus, Ohio. Our owner, Cody Stallter, is an ASNT Level III in magnetic particle (MT), ultrasonic (UT), liquid penetrant (PT), and visual testing (VT). He brings more than 15 years in fire apparatus testing and non-destructive testing, and he is the only Level III on our team.</p>
         <br/>
