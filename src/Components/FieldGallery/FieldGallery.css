@@ -7,6 +7,11 @@
   padding: 12px;
 }
 
+.field-gallery picture {
+  display: block;
+  min-width: 0;
+}
+
 .field-gallery img {
   display: block;
   width: 100%;

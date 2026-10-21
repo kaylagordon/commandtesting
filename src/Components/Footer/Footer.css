@@ -34,14 +34,36 @@
 .footer-contact a {
   color: #FF4C4C;
   text-decoration: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-contact a:hover {
   text-decoration: underline;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .footer-copyright {
-  color: #6b6b6b;
+  color: #A9A9A9;
   font-size: 12px;
   text-align: center;
   margin-top: 24px;
@@ -49,13 +71,22 @@
 
 #back-to-top-btn {
   border: none;
-  background-color: #FF4C4C;
+  background-color: #d32f2f;
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 95%;
   top: 90%;
+}
+
+#back-to-top-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 @media screen and (max-width: 1000px) {

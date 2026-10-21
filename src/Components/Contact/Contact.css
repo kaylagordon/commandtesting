@@ -6,9 +6,19 @@
 }
 
 .form-container,
-.half-page-image,
+.contact .half-page-image,
 .half-page-section {
   width: 50%;
+}
+
+.contact .half-page-image {
+  display: block;
+}
+
+.contact .half-page-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 form {
@@ -24,7 +34,8 @@ form {
   justify-content: center;
 }
 
-h4 {
+h4,
+.contact h2 {
   color: white;
   font-size: 35px;
 }
@@ -88,6 +99,7 @@ input[type='submit'] {
   font-size: 16px;
   border-radius: 10px;
   padding: 8px;
+  min-height: 44px;
 }
 
 input:focus,
@@ -96,8 +108,15 @@ select:focus {
   outline: none;
 }
 
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #d32f2f;
+  outline-offset: 2px;
+}
+
 input[type='submit']:hover {
-  background-color: #FF4C4C;
+  background-color: #d32f2f;
   color: white;
   cursor: pointer;
 }

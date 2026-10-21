@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Restore a GitHub Pages 404.html redirect (/?/aerial) to a real path
+      // before the app reads the URL.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location));
+    </script>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
 
     <title>Aerial &amp; Ground Ladder Testing Nationwide | Command Testing</title>
-    <meta name="description" content="Based in Columbus, OH, Command Testing provides aerial and ground ladder testing for fire departments nationwide to NFPA 1910 (formerly NFPA 1911) and NFPA 1930 (formerly NFPA 1932). Fire pump testing is offered in central Ohio and at apparatus manufacturers. Work is performed by NDT Level II technicians with ASNT Level III oversight." />
+    <meta name="description" content="Based in Columbus, OH, Command Testing tests aerial devices and ground ladders for fire departments nationwide to NFPA 1910 (formerly NFPA 1911) and NFPA 1930 (formerly NFPA 1932). Fire pump testing is offered in central Ohio and at apparatus manufacturers. Work is performed by NDT Level II technicians with ASNT Level III oversight." />
     <meta name="keywords" content="aerial ladder testing, ground ladder testing, fire pump testing, NFPA 1900, NFPA 1910 (formerly NFPA 1911), NFPA 1930 (formerly NFPA 1932), Columbus OH, central Ohio, Command Testing, NDT Level II, ASNT Level III" />
     <link rel="canonical" href="https://commandtesting.com/" />
 
@@ -26,7 +40,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "name": "Command Testing",
         "url": "https://commandtesting.com/",
         "image": "https://commandtesting.com/og-image.jpg",
@@ -40,15 +54,14 @@
         "areaServed": "United States",
         "description": "Based in Columbus, OH. Aerial and ground ladder testing for fire departments nationwide to NFPA 1910 (formerly NFPA 1911) and NFPA 1930 (formerly NFPA 1932). Fire pump testing in central Ohio and at apparatus manufacturers. Performed by NDT Level II technicians with ASNT Level III oversight.",
         "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ISO/IEC 17020 Accreditation" },
           { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "NDT Level II" },
           { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ASNT Level III (MT, UT, PT, VT)" }
         ],
         "makesOffer": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aerial Ladder Testing", "areaServed": "United States" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ground Ladder Testing", "areaServed": "United States" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fire Pump Testing", "areaServed": "Central Ohio" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Non-Destructive Testing" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fire Pump Testing", "areaServed": "Central Ohio", "description": "Apparatus fire pump testing in central Ohio and at apparatus manufacturers." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Non-Destructive Testing", "areaServed": "United States" } }
         ]
       }
     </script>

@@ -1,29 +1,28 @@
 import './FieldGallery.css';
-import aerial from '../../assets/aerial-test-2.jpg';
-import ladder from '../../assets/ground-ladder-test.jpg';
-import pumpDraft from '../../assets/hero-pump-testing.jpg';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
-const photos = [
-  {
-    src: aerial,
-    alt: 'Aerial ladder extended over a fire station during on-site aerial device testing',
-  },
-  {
-    src: ladder,
-    alt: 'Ground ladder on a test rack with a gauge during annual ladder testing',
-  },
-  {
-    src: pumpDraft,
-    alt: 'Technician checking a flow meter and hose line during an annual fire pump test',
-  },
-];
+const keys = ['aerialWide', 'ladder', 'pumpDraft'];
 
 const FieldGallery = () => {
   return (
     <section className="field-gallery" aria-label="Aerial, ground ladder, and pump testing">
-      {photos.map((photo) => (
-        <img key={photo.alt} src={photo.src} alt={photo.alt} loading="lazy" />
-      ))}
+      {keys.map((key) => {
+        const photo = PHOTOS[key];
+        return (
+          <Photo
+            key={key}
+            className="field-photo"
+            imgClassName="field-photo-img"
+            webp={photo.webp}
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            loading="lazy"
+          />
+        );
+      })}
     </section>
   );
 };

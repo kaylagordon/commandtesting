@@ -12,6 +12,14 @@ red: #FF4C4C
 
 .WhatWeDo .logo {
   width: 75px;
+  display: block;
+  margin: 0 auto;
+}
+
+.WhatWeDo .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .WhatWeDo h4 {
@@ -33,7 +41,7 @@ red: #FF4C4C
   flex-wrap: wrap;
 }
 
-.offer-bundle {
+a.offer-bundle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,17 +50,30 @@ red: #FF4C4C
   min-width: 250px;
   padding: 10px;
   flex-basis: 20%;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.offer-bundle:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
 }
 
 .offer-image {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
-  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.offer-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 5px;
-  background-color: #1a1a1a;
 }
 
 .offer-bundle h5 {
@@ -68,7 +89,22 @@ red: #FF4C4C
   line-height: 1.45;
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.offer-more {
+  color: #ffffff;
+  background-color: #d32f2f;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 @media screen and (max-width: 700px) {

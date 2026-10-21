@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import truckRear from '../../assets/truck_rear_bw_cropped.jpeg';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
 // Quote requests are sent directly to info@commandtesting.com via Web3Forms,
 // so no third party's personal inbox is in the loop.
@@ -112,9 +113,9 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact" ref={this.props.nav}>
+      <div className="contact" id="contact">
       <div className="form-container">
-        <h4>REQUEST A QUOTE</h4>
+        <h2>REQUEST A QUOTE</h2>
         { this.state.success &&
           <div className="success-container">
             <p className="success">{this.state.success}</p>
@@ -250,7 +251,16 @@ class Contact extends Component {
           </form>
         }
       </div>
-      <img src={truckRear} className="half-page-image" alt="Rear of a fire engine tested by Command Testing" loading="lazy" />
+      <Photo
+        className="half-page-image"
+        imgClassName="half-page-image-img"
+        webp={PHOTOS.truckRear.webp}
+        src={PHOTOS.truckRear.src}
+        alt={PHOTOS.truckRear.alt}
+        width={PHOTOS.truckRear.width}
+        height={PHOTOS.truckRear.height}
+        loading="lazy"
+      />
       </div>
     );
   }

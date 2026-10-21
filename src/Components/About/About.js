@@ -1,18 +1,34 @@
 import './About.css';
-import commandTruck from '../../assets/aerial-command-truck.jpg';
-import logo from '../../assets/logo.png';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
-const About = ({ nav }) => {
+const About = () => {
+  const truck = PHOTOS.commandTruck;
+  const logo = PHOTOS.logo;
+
   return (
-    <div className="about" ref={nav}>
-      <img
-        src={commandTruck}
+    <div className="about" id="who-we-are">
+      <Photo
         className="about-photo"
-        alt="Command Testing truck parked in front of a raised aerial ladder during on-site testing"
+        imgClassName="about-photo-img"
+        webp={truck.webp}
+        src={truck.src}
+        alt={truck.alt}
+        width={truck.width}
+        height={truck.height}
         loading="lazy"
       />
       <section className="half-page-section">
-        <img src={logo} className="logo" alt="Command Testing logo" loading="lazy" />
+        <Photo
+          className="logo"
+          imgClassName="logo-img"
+          webp={logo.webp}
+          src={logo.src}
+          alt={logo.alt}
+          width={logo.width}
+          height={logo.height}
+          loading="lazy"
+        />
         <h4>WHO WE ARE</h4>
         <p>We are based in Columbus, Ohio. Our owner, Cody Stallter, is an ASNT Level III in magnetic particle (MT), ultrasonic (UT), liquid penetrant (PT), and visual testing (VT). He brings more than 15 years in fire apparatus testing and non-destructive testing.</p>
         <br/>

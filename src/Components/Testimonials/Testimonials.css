@@ -5,7 +5,7 @@
 }
 
 .testimonials h4 {
-  color: #FF4C4C;
+  color: #d32f2f;
   margin-bottom: 28px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .testimonial cite {
-  color: #FF4C4C;
+  color: #c62828;
   font-style: normal;
   font-size: 13px;
   font-weight: 700;
@@ -52,6 +52,10 @@
 
 .testimonials-reviews {
   margin-top: 22px;
+}
+
+.testimonials .google-reviews-link {
+  color: #c62828;
 }
 
 @media screen and (max-width: 700px) {

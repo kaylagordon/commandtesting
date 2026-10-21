@@ -8,9 +8,15 @@
   background-color: #262626;
 }
 
-.hero-image {
+.hero-frame {
   position: absolute;
   inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -20,7 +26,7 @@
 .transparent {
   position: relative;
   z-index: 1;
-  background-color: #FF4C4C;
+  background-color: #d32f2f;
   opacity: .9;
   color: white;
   text-align: center;
@@ -58,6 +64,7 @@ h2 {
   border-radius: 6px;
   font-weight: bold;
   font-size: calc(13px + .3vw);
+  min-height: 44px;
   padding: 14px 32px;
   margin-top: 4vh;
   cursor: pointer;
@@ -66,7 +73,12 @@ h2 {
 
 .hero-cta:hover {
   background-color: white;
-  color: #FF4C4C;
+  color: #b71c1c;
+}
+
+.hero-cta:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 @media screen and (max-width: 1150px) {

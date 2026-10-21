@@ -1,14 +1,22 @@
 import './Home.css';
-import hero from '../../assets/aerial_platform_bw_cropped.jpg';
+import { useHistory } from 'react-router-dom';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
-function Home({ myRef, top, contact, scrollTo }) {
+function Home({ myRef }) {
+  const history = useHistory();
+  const hero = PHOTOS.hero;
 
   return (
-    <main className="home" ref={ top }>
-      <img
-        className="hero-image"
-        src={hero}
-        alt="Aerial ladder extended from a fire apparatus"
+    <main className="home" id="top">
+      <Photo
+        className="hero-frame"
+        imgClassName="hero-image"
+        webp={hero.webp}
+        src={hero.src}
+        alt={hero.alt}
+        width={hero.width}
+        height={hero.height}
         fetchPriority="high"
       />
       <div className="transparent">
@@ -17,7 +25,7 @@ function Home({ myRef, top, contact, scrollTo }) {
           <h2>FIRE APPARATUS TESTING</h2>
           <h3 ref={ myRef }>AERIAL, PUMP, &amp; GROUND LADDER TESTING</h3>
           <p className="hero-subtext">Based in Columbus, OH<br />Aerial and ground ladder testing for fire departments nationwide</p>
-          <button className="hero-cta" onClick={() => { scrollTo(contact) }}>REQUEST A QUOTE</button>
+          <button className="hero-cta" type="button" onClick={() => history.push({ pathname: '/', hash: '#contact' })}>REQUEST A QUOTE</button>
         </section>
       </div>
     </main>

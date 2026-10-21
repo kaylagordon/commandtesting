@@ -2,7 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://commandtesting.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://commandtesting.com/aerial</loc>
+  </url>
+  <url>
+    <loc>https://commandtesting.com/ground-ladders</loc>
+  </url>
+  <url>
+    <loc>https://commandtesting.com/pump</loc>
+  </url>
+  <url>
+    <loc>https://commandtesting.com/ndt</loc>
   </url>
 </urlset>
