@@ -1,11 +1,10 @@
 import './Credentials.css';
 
 const items = [
-  'ISO/IEC 17020 Accredited',
-  'ASNT Level II Certified',
-  'NFPA 1900, 1910 & 1930 Compliant',
-  '15+ Years Experience',
-  'Nationwide Service'
+  'ASNT Level III oversight',
+  'NDT Level II technicians',
+  'Testing to current NFPA standards',
+  'Nationwide service'
 ];
 
 const Credentials = () => {

@@ -1,0 +1,79 @@
+.service-page {
+  background-color: #262626;
+  color: #f2f2f2;
+  padding: 36px 20px 8px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.service-page h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  margin: 8px 0 18px;
+}
+
+.service-kicker {
+  color: #FF4C4C;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.service-photo {
+  display: block;
+  margin: 0 0 18px;
+}
+
+.service-photo-img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.service-lede,
+.service-page li,
+.service-crosslink {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.service-accredited {
+  margin: 14px 0;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.service-page h2 {
+  color: #FF4C4C;
+  font-size: 22px;
+  margin: 22px 0 8px;
+}
+
+.service-page ul {
+  padding-left: 1.2em;
+  margin: 0 0 8px;
+}
+
+.service-page li {
+  margin-bottom: 8px;
+}
+
+.service-crosslink a {
+  color: #FF4C4C;
+  font-weight: 800;
+}
+
+.service-page .quote-cta-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .service-page {
+    padding-top: 24px;
+  }
+}

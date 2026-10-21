@@ -1,20 +1,47 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import truckRear from '../../assets/truck_rear_bw_cropped.jpeg';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
 // Quote requests are sent directly to info@commandtesting.com via Web3Forms,
 // so no third party's personal inbox is in the loop.
 const WEB3FORMS_ACCESS_KEY = '2123542d-7fe2-4e85-87cc-d932e5c379e6';
+
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const EMPTY_FORM = {
+  name: '',
+  phone: '',
+  email: '',
+  department: '',
+  city: '',
+  usState: '',
+  aerialDevices: '',
+  ladderFootage: '',
+  pumps: '',
+  preferredMonth: '',
+  message: '',
+};
 
 class Contact extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
+      ...EMPTY_FORM,
       error: false,
       success: false,
       sending: false
@@ -31,8 +58,9 @@ class Contact extends Component {
   sendEmail = async (event) => {
     event.preventDefault();
 
-    if (!(this.state.name && this.state.phone && this.state.email && this.state.message)) {
-      this.setState({ error: "Please fill out all fields." })
+    const required = ['name', 'phone', 'email', 'department', 'city', 'usState', 'message'];
+    if (required.some((field) => !String(this.state[field]).trim())) {
+      this.setState({ error: 'Please fill out your name, phone, email, department, city, state, and message.' })
       return;
     }
 
@@ -49,6 +77,13 @@ class Contact extends Component {
           name: this.state.name,
           phone: this.state.phone,
           email: this.state.email,
+          department: this.state.department,
+          city: this.state.city,
+          state: this.state.usState,
+          aerial_devices: this.state.aerialDevices,
+          ground_ladder_footage: this.state.ladderFootage,
+          pumps: this.state.pumps,
+          preferred_month: this.state.preferredMonth,
           message: this.state.message,
         })
       });
@@ -67,10 +102,7 @@ class Contact extends Component {
 
   displaySuccess = () => {
     this.setState({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
+      ...EMPTY_FORM,
       sending: false,
       success: "Success! Your message has been sent. We will reach out to you shortly."
     });
@@ -81,9 +113,9 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact" ref={this.props.nav}>
+      <div className="contact" id="contact">
       <div className="form-container">
-        <h4>REQUEST A QUOTE</h4>
+        <h2>REQUEST A QUOTE</h2>
         { this.state.success &&
           <div className="success-container">
             <p className="success">{this.state.success}</p>
@@ -91,33 +123,125 @@ class Contact extends Component {
         }
         { !this.state.success  &&
           <form onSubmit={this.sendEmail}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={this.state.name}
-              onChange={(e) => this.handleChange(e)}
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Your Phone Number"
-              value={this.state.phone}
-              onChange={(e) => this.handleChange(e)}
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Your Email Address"
-              value={this.state.email}
-              onChange={(e) => this.handleChange(e)}
-            />
-            <textarea
-              name="message"
-              placeholder="How can we help you?"
-              value={this.state.message}
-              onChange={(e) => this.handleChange(e)}
-            ></textarea>
+            <label>
+              Department / Company
+              <input
+                type="text"
+                name="department"
+                autoComplete="organization"
+                value={this.state.department}
+                onChange={this.handleChange}
+              />
+            </label>
+            <div className="form-row">
+              <label>
+                City
+                <input
+                  type="text"
+                  name="city"
+                  autoComplete="address-level2"
+                  value={this.state.city}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <label>
+                State
+                <input
+                  type="text"
+                  name="usState"
+                  autoComplete="address-level1"
+                  value={this.state.usState}
+                  onChange={this.handleChange}
+                />
+              </label>
+            </div>
+            <div className="form-row">
+              <label>
+                Number of aerial devices
+                <input
+                  type="number"
+                  name="aerialDevices"
+                  min="0"
+                  inputMode="numeric"
+                  value={this.state.aerialDevices}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <label>
+                Ground ladder footage (approx.)
+                <input
+                  type="number"
+                  name="ladderFootage"
+                  min="0"
+                  inputMode="numeric"
+                  value={this.state.ladderFootage}
+                  onChange={this.handleChange}
+                />
+              </label>
+            </div>
+            <label>
+              Pumps
+              <span className="field-hint">Only if you are in central Ohio or an apparatus manufacturer.</span>
+              <input
+                type="number"
+                name="pumps"
+                min="0"
+                inputMode="numeric"
+                value={this.state.pumps}
+                onChange={this.handleChange}
+              />
+            </label>
+            <label>
+              Preferred month
+              <select
+                name="preferredMonth"
+                value={this.state.preferredMonth}
+                onChange={this.handleChange}
+              >
+                <option value="">Select a month</option>
+                {MONTHS.map((month) => (
+                  <option key={month} value={month}>{month}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Your Name
+              <input
+                type="text"
+                name="name"
+                autoComplete="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
+            </label>
+            <label>
+              Your Email Address
+              <input
+                type="email"
+                name="email"
+                autoComplete="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </label>
+            <label>
+              Your Phone Number
+              <input
+                type="tel"
+                name="phone"
+                autoComplete="tel"
+                value={this.state.phone}
+                onChange={this.handleChange}
+              />
+            </label>
+            <label>
+              How can we help you?
+              <textarea
+                name="message"
+                value={this.state.message}
+                onChange={this.handleChange}
+              ></textarea>
+            </label>
             { this.state.error && <p className="error">{this.state.error}</p> }
             <input
               type="submit"
@@ -127,7 +251,16 @@ class Contact extends Component {
           </form>
         }
       </div>
-      <img src={truckRear} className="half-page-image" alt="Rear of a fire engine tested by Command Testing" />
+      <Photo
+        className="half-page-image"
+        imgClassName="half-page-image-img"
+        webp={PHOTOS.truckRear.webp}
+        src={PHOTOS.truckRear.src}
+        alt={PHOTOS.truckRear.alt}
+        width={PHOTOS.truckRear.width}
+        height={PHOTOS.truckRear.height}
+        loading="lazy"
+      />
       </div>
     );
   }

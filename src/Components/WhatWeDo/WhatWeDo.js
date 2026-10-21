@@ -1,37 +1,73 @@
 import './WhatWeDo.css';
-import logo from '../../assets/logo.png';
-import aerial from '../../assets/aerial_bucket_square.jpg';
-import ladder from '../../assets/ground_ladder_square.jpg';
-import pump from '../../assets/pump_testing_square.jpg';
-import weld from '../../assets/welds_square.jpg';
+import { Link } from 'react-router-dom';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
-const WhatWeDo = ({ nav }) => {
+const services = [
+  {
+    key: 'aerial',
+    path: '/aerial',
+    title: 'Aerial Ladder Testing',
+    text: 'Annual aerial device certification testing in accordance with NFPA 1900 and NFPA 1910 (formerly NFPA 1911), performed on-site for fire departments nationwide.',
+  },
+  {
+    key: 'ladder',
+    path: '/ground-ladders',
+    title: 'Ground Ladder Testing',
+    text: 'Annual ground ladder testing and certification in accordance with NFPA 1930 (formerly NFPA 1932), for fire departments nationwide.',
+  },
+  {
+    key: 'pump',
+    path: '/pump',
+    title: 'Fire Pump Testing',
+    text: 'Apparatus fire pump testing in accordance with NFPA 1900 and NFPA 1910 (formerly NFPA 1911), offered locally in central Ohio and at apparatus manufacturers.',
+  },
+  {
+    key: 'ndt',
+    path: '/ndt',
+    title: 'Non-Destructive Testing',
+    text: 'Liquid penetrant, magnetic particle, ultrasonic, and visual testing performed by NDT Level II technicians with ASNT Level III oversight.',
+  },
+];
+
+const WhatWeDo = () => {
+  const logo = PHOTOS.logo;
+
   return (
-    <div className="WhatWeDo" ref={nav}>
-      <img src={logo} className="logo" alt="Command Testing logo" />
+    <div className="WhatWeDo" id="what-we-do">
+      <Photo
+        className="logo"
+        imgClassName="logo-img"
+        webp={logo.webp}
+        src={logo.src}
+        alt={logo.alt}
+        width={logo.width}
+        height={logo.height}
+        loading="lazy"
+      />
       <h4>WHAT WE DO</h4>
-      <p className="service-area">Serving fire departments and municipalities nationwide</p>
+      <p className="service-area">Based in Columbus, OH<br />Aerial and ground ladder testing for fire departments nationwide</p>
       <section className="bundle-container">
-        <section className="offer-bundle">
-          <img src={aerial} className="offer-image" alt="Fire department aerial ladder truck bucket during annual aerial ladder testing" />
-          <h5>Aerial Ladder Testing</h5>
-          <p className="offer-text">Annual aerial device certification testing in accordance with NFPA 1900 & 1910, performed on-site at your station.</p>
-        </section>
-        <section className="offer-bundle">
-          <img src={ladder} className="offer-image" alt="Ground ladders laid out for annual ground ladder testing" />
-          <h5>Ground Ladder Testing</h5>
-          <p className="offer-text">Annual ground ladder testing and certification in accordance with NFPA 1930.</p>
-        </section>
-        <section className="offer-bundle">
-        <img src={pump} className="offer-image" alt="Fire engine pump truck during annual fire pump testing" />
-        <h5>Fire Pump Testing</h5>
-        <p className="offer-text">Apparatus fire pump testing in accordance with NFPA 1900 & 1910.</p>
-        </section>
-        <section className="offer-bundle">
-          <img src={weld} className="offer-image" alt="Close-up of aerial device welds inspected during non-destructive testing" />
-          <h5>Non-Destructive Testing</h5>
-          <p className="offer-text">Liquid penetrant, magnetic particle, ultrasonic, and visual testing performed by ASNT Level II certified technicians.</p>
-        </section>
+        {services.map((service) => {
+          const photo = PHOTOS[service.key];
+          return (
+            <Link className="offer-bundle" to={service.path} key={service.path}>
+              <Photo
+                className="offer-image"
+                imgClassName="offer-image-img"
+                webp={photo.webp}
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading="lazy"
+              />
+              <h5>{service.title}</h5>
+              <p className="offer-text">{service.text}</p>
+              <span className="offer-more">Service details</span>
+            </Link>
+          );
+        })}
       </section>
     </div>
   );

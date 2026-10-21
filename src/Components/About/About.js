@@ -1,20 +1,40 @@
 import './About.css';
-import pumpPanel from '../../assets/pump_panel1.jpg';
-import logo from '../../assets/logo.png';
+import Photo from '../Photo/Photo';
+import { PHOTOS } from '../../photos';
 
-const About = ({ nav }) => {
+const About = () => {
+  const truck = PHOTOS.commandTruck;
+  const logo = PHOTOS.logo;
+
   return (
-    <div className="about" ref={nav}>
-      <img src={pumpPanel} className="half-page-image" alt="Close-up of a fire apparatus pump panel gauges during Command Testing's NFPA pump testing" />
+    <div className="about" id="who-we-are">
+      <Photo
+        className="about-photo"
+        imgClassName="about-photo-img"
+        webp={truck.webp}
+        src={truck.src}
+        alt={truck.alt}
+        width={truck.width}
+        height={truck.height}
+        loading="lazy"
+      />
       <section className="half-page-section">
-        <img src={logo} className="logo" alt="Command Testing logo" />
+        <Photo
+          className="logo"
+          imgClassName="logo-img"
+          webp={logo.webp}
+          src={logo.src}
+          alt={logo.alt}
+          width={logo.width}
+          height={logo.height}
+          loading="lazy"
+        />
         <h4>WHO WE ARE</h4>
-        <p>Owner, Cody Stallter, has over 15 years of experience in fire apparatus testing and non-destructive testing. He is an ASNT Level II in liquid penetrant, magnetic particle, ultrasonic, and visual testing. Command Testing is ISO/IEC 17020 accredited, and having family in the fire protection services industry, firefighter safety is the highest importance for all personnel at Command.
-        </p>
+        <p>We are based in Columbus, Ohio. Our owner, Cody Stallter, is an ASNT Level III in magnetic particle (MT), ultrasonic (UT), liquid penetrant (PT), and visual testing (VT). He brings more than 15 years in fire apparatus testing and non-destructive testing.</p>
         <br/>
-        <p>As a company, Command Testing strives to perform highest quality of work so that fire department personnel can depend on their life saving equipment — serving fire departments nationwide.</p>
+        <p>Our inspections are performed by NDT Level II technicians with ASNT Level III oversight. We are ISO/IEC 17020 accredited. Firefighter safety comes first for us, and we hold our work to a standard fire departments can depend on.</p>
         <br/>
-        <p>Command Testing provides testing and certification services for major fire apparatus manufacturers and large city and county fire departments across the country — but we're not limited to big names. Whatever the size of your department or fleet, you get the same NFPA-compliant testing and ASNT Level II inspection.</p>
+        <p>We test aerial devices and ground ladders for fire departments nationwide, from large city and county departments to smaller fleets. Fire pump testing is available locally in central Ohio and at apparatus manufacturers. Every department receives the same NFPA-compliant testing.</p>
       </section>
     </div>
   );

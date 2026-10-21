@@ -1,0 +1,10 @@
+.google-reviews-link {
+  color: #FF4C4C;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.google-reviews-link:hover {
+  text-decoration: underline;
+}

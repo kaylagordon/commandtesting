@@ -1,0 +1,28 @@
+.field-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  background-color: #1a1a1a;
+  padding: 12px;
+}
+
+.field-gallery picture {
+  display: block;
+  min-width: 0;
+}
+
+.field-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 800px) {
+  .field-gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+}

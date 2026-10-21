@@ -7,11 +7,34 @@ red: #FF4C4C
 
 .about {
   display: flex;
+  align-items: center;
   background-color: white;
 }
 
-.half-page-section img {
+.about-photo {
+  width: 46%;
+  height: auto;
+  flex: 0 0 auto;
+  align-self: center;
+  display: block;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.about .logo {
   width: 75px;
+  display: block;
+}
+
+.about .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .half-page-section {
@@ -23,11 +46,28 @@ red: #FF4C4C
 }
 
 .about h4 {
-  color: #FF4C4C;
+  color: #d32f2f;
   margin: 25px 0;
 }
 
 .about p {
   color: #262626;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about {
+    padding: 16px 0 8px;
+  }
+
+  .about-photo {
+    width: min(100%, 480px);
+    height: auto;
+    margin: 0 auto;
+    flex: none;
+  }
 }

@@ -10,3 +10,11 @@ red: #FF4C4C
   margin: 0;
   padding: 0;
 }
+
+#what-we-do,
+#who-we-are,
+#what-to-expect,
+#faq,
+#contact {
+  scroll-margin-top: 180px;
+}
