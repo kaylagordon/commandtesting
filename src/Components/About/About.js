@@ -1,14 +1,14 @@
 import './About.css';
-import nightFlow from '../../assets/pump-night-flow.jpg';
+import commandTruck from '../../assets/aerial-command-truck.jpg';
 import logo from '../../assets/logo.png';
 
 const About = ({ nav }) => {
   return (
     <div className="about" ref={nav}>
       <img
-        src={nightFlow}
+        src={commandTruck}
         className="about-photo"
-        alt="Water discharging from a hose during a nighttime fire pump flow test"
+        alt="Command Testing truck parked in front of a raised aerial ladder during on-site testing"
         loading="lazy"
       />
       <section className="half-page-section">

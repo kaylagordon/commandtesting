@@ -1,5 +1,5 @@
 import './Home.css';
-import hero from '../../assets/hero-pump-testing.jpg';
+import hero from '../../assets/aerial_platform_bw_cropped.jpg';
 
 function Home({ myRef, top, contact, scrollTo }) {
 
@@ -8,7 +8,7 @@ function Home({ myRef, top, contact, scrollTo }) {
       <img
         className="hero-image"
         src={hero}
-        alt="Technician checking a flow meter and hose line during an annual fire pump test"
+        alt="Aerial ladder extended from a fire apparatus"
         fetchPriority="high"
       />
       <div className="transparent">

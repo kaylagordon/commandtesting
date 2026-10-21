@@ -9,6 +9,7 @@ import Contact from '../Contact/Contact.js';
 import Footer from '../Footer/Footer.js';
 import Credentials from '../Credentials/Credentials.js';
 import Testimonials from '../Testimonials/Testimonials.js';
+import FieldGallery from '../FieldGallery/FieldGallery.js';
 
 function App() {
   const top = useRef();
@@ -28,6 +29,7 @@ function App() {
         <Home myRef={ myRef } top={ top } contact={ contact } scrollTo={ scrollTo } />
         <Credentials />
         <WhatWeDo nav={ offerings } />
+        <FieldGallery />
         <About nav={ about } />
         <Testimonials />
         <Contact nav={ contact } />
