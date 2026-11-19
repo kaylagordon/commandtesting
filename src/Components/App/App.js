@@ -15,6 +15,7 @@ import WhatToExpect from '../WhatToExpect/WhatToExpect.js';
 import Faq from '../Faq/Faq.js';
 import QuoteCta from '../QuoteCta/QuoteCta.js';
 import ServicePage from '../ServicePage/ServicePage.js';
+import NotFound from '../NotFound/NotFound.js';
 import Seo from '../Seo/Seo.js';
 import { PAGES } from '../../siteContent';
 
@@ -81,6 +82,9 @@ function App() {
         </Route>
         <Route path="/ndt">
           <ServicePage id="ndt" />
+        </Route>
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
       <Footer />

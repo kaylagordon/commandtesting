@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      // Restore a GitHub Pages 404.html redirect (/?/aerial) to a real path
-      // before the app reads the URL.
+      // Older 404.html copies sent unknown GitHub Pages paths to /?/aerial.
+      // Restore that query to a real path before the app reads the URL.
       (function (l) {
         if (l.search[1] === '/') {
           var decoded = l.search.slice(1).split('&').map(function (s) {
